@@ -22,7 +22,7 @@
                  fill="#be3827"/>
         <polygon points="9 37 19 37 19 23 48 23 48 28 53 28 53 42 48 42 48 51 14 51 14 46 9 46 9 37"
                  fill="#fbd868"/>
-        <rect x="33" y="39" width="10" height="5" fill="#bec1c3"/>
+        <rect x="33" y="39" `width`="10" height="5" fill="#bec1c3"/>
         <rect x="14" y="37" width="5" height="9" fill="#bec1c3"/>
         <polygon
           points="48 39 48 44.34 43 44.34 43 49.69 33 49.69 33 44.34 29 44.34 29 48.62 23 48.62 23 53.97 29 53.97 29 59.31 33 59.31 33 64.66 38 64.66 38 70 43 70 43 64.66 48 64.66 48 53.97 53 53.97 53 48.62 57 48.62 57 39 48 39"
@@ -183,23 +183,20 @@
 <script>
 var fireballSize = 22;
 var getFireballSpeed = function (left) {
- return left ? 5 : 2;
+  return left ? 5 : 2;
 }
-var wizardSpeed = 3;
-var wizardWidth = 70;
+
+wizardSpeed = 3;
+wizardWidth = 70;
 
 var getWizardHeight = function (wizardWidth) {
-  var proportionHeight = 1.337 * wizardWidth
-    return proportionHeight
+  return 1.337 * wizardWidth;
 }
-
-var getWizardX  = function (width) {
-  var xPosition = width / 2;
-    return xPosition;
+function getWizardX (width) {
+  return width / 2.5;
 }
-var getWizardY = function (height) {
-  var yPosition = height / 2;
-    return yPosition;
+function getWizardY(height) {
+  return height / 3;
 }
 </script>
 <script src="js/game.js"></script>
